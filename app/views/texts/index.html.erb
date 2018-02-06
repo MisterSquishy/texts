@@ -1,0 +1,16 @@
+<h1>Listing texts in a really ugly table</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @texts.each do |text| %>
+    <tr>
+      <td><%= text.title %></td>
+      <td><%= text.text %></td>
+      <td><%= link_to 'Show', text_path(text) %></td>
+    </tr>
+  <% end %>
+</table>

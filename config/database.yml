@@ -6,6 +6,8 @@ default: &default
 development:
   <<: *default
   database: db/postgres_dev
+  username: postgres
+  password: <%= ENV['RUBY-RAILS_DATABASE_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -13,7 +15,11 @@ development:
 test:
   <<: *default
   database: db/postgres_test
+  username: postgres
+  password: <%= ENV['RUBY-RAILS_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
   database: db/postgres_production
+  username: postgres #todo set up a real production user??
+  password: <%= ENV['RUBY-RAILS_DATABASE_PASSWORD'] %>

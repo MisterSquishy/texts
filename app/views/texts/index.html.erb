@@ -2,14 +2,18 @@
  
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Time</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Body</th>
   </tr>
  
   <% @texts.each do |text| %>
     <tr>
-      <td><%= text.title %></td>
-      <td><%= text.text %></td>
+      <td><%= text.datetime.to_formatted_s(:short) %></td>
+      <td><%= text.from %></td>
+      <td><%= text.to %></td>
+      <td><%= text.body %></td>
       <td><%= link_to 'Show', text_path(text) %></td>
     </tr>
   <% end %>

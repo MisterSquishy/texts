@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
     def index
-        @texts = Text.all
+        @texts = Text.all.limit('20') #todo no
     end
 
     def show

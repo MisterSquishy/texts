@@ -1,0 +1,51 @@
+<div class="message-container w-25">
+  <p class="date">
+    <%= text.datetime.to_formatted_s(:long) %>
+  </p>
+  <% if text.from == "Pete" %>
+  <!-- TODO CLEANUP -->
+    <div class="block_table">
+      <table class="left" width="auto" height="auto" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="left_top2"></td>
+          <td width="auto" class="bg_color2" height="12"></td>
+          <td class="right_top2"></td>
+        </tr>
+        <tr>
+          <td height="auto" class="right_mid2"></td>
+          <td class="bg_color2" maxwidth="330">
+            <%= text.body %>
+          </td>
+          <td class="bg_color2" width="14"></td>
+        </tr>
+        <tr>
+          <td class="left_bottom2"></td>
+          <td class="bg_color2"></td>
+          <td class="right_bottom2"></td>
+        </tr>
+      </table>
+    </div>
+  <% else %>
+    <div class="block_table">
+      <table class="right" width="auto" height="auto" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="left_top"></td>
+          <td width="auto" class="bg_color" height="12"></td>
+          <td class="right_top"></td>
+        </tr>
+        <tr>
+          <td height="auto" class="bg_color"></td>
+          <td class="bg_color" maxwidth="330">
+            <%= text.body %>
+          </td>
+          <td class="right_mid" width="14"></td>
+        </tr>
+        <tr>
+          <td class="left_bottom"></td>
+          <td class="bg_color"></td>
+          <td class="right_bottom"></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+</div>

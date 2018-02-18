@@ -1,18 +1,5 @@
-<h1>Listing texts in a really ugly table</h1>
- 
-<table class="table table-hover w-100 container-fluid">
-  <tr>
-    <th>Time</th>
-    <th>From</th>
-    <th>Body</th>
-  </tr>
- 
+<p class="imessage">iMessage</p>
   <% @texts.each do |text| %>
-    <tr>
-      <td><%= text.datetime.to_formatted_s(:short) %></td>
-      <td><%= text.from %></td>
-      <td><%= text.body %></td>
-      <td><%= link_to 'Show', text_path(text) %></td>
-    </tr>
+    <%= render text %>
   <% end %>
 </table>

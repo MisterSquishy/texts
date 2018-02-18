@@ -1,8 +1,12 @@
 /* mimics imessage formatting */
+/* TODOS:
+- spacing on date labels (above/below)
+- date text smaller
+- padding in message bubble too big */
 .message-container * {
   margin: 0;
   padding: 0;
-  font: normal 12px "Lucida Grande", "Lucida Sans Unicode", "Arial";
+  font: normal 14px "Lucida Grande", "Lucida Sans Unicode", "Arial";
   color: #333;
 }
 .message-container body {

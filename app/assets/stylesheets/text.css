@@ -1,11 +1,5 @@
 /* mimics imessage formatting */
-/* TODOS:
-- spacing on date labels (above/below)
-- date text smaller
-- padding in message bubble too big */
 .message-container * {
-  margin: 0;
-  padding: 0;
   font: normal 14px "Lucida Grande", "Lucida Sans Unicode", "Arial";
   color: #333;
 }
@@ -44,10 +38,10 @@
   border-bottom: 1px solid #e5e5e5;
 }
 .message-container .date {
-  font-size: 14px;
+  font-size: 12px;
   color: #919191;
   text-align: center;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .message-container .imessage {
   font-size: 14px;
@@ -83,7 +77,6 @@
 .message-container .block_table {
   width: 100%;
   float: left;
-  margin: 12px 0 0 0;
 }
 .message-container .block_table tr td {
   max-width: 302px;
